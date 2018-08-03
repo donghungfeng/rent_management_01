@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'users/account'
+  end
   root "static_pages#home"
   get  "/room", to: "static_pages#room"
   get  "/news", to: "static_pages#news"
@@ -10,4 +13,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+  namespace :admin do
+    resources :users
+  end
 end
