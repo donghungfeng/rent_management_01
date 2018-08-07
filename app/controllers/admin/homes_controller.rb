@@ -20,7 +20,7 @@ class Admin::HomesController < ApplicationController
 
     respond_to do |format|
       if @admin_home.save
-        format.html { redirect_to admin_homes_path, notice: 'home was successfully created.' }
+        format.html { redirect_to admin_homes_path, notice: t("controllers.admin.homes_controller.create") }
         format.json { render :show, status: :created, location: admin/homes }
       else
         format.html { render :new }
@@ -32,7 +32,7 @@ class Admin::HomesController < ApplicationController
   def update
     respond_to do |format|
       if @home.update(home_params)
-        format.html { redirect_to @home, notice: 'home was successfully updated.' }
+        format.html { redirect_to @home, notice: t("controllers.admin.homes_controller.update") }
         format.json { render :show, status: :ok, location: @home }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class Admin::HomesController < ApplicationController
   def destroy
     @home.destroy
     respond_to do |format|
-      format.html { redirect_to homes_url, notice: 'home was successfully destroyed.' }
+      format.html { redirect_to homes_url, notice: t("controllers.admin.homes_controller.destroy") }
       format.json { head :no_content }
     end
   end
@@ -64,7 +64,7 @@ class Admin::HomesController < ApplicationController
 
     respond_to do |format|
       if @admin_room.save
-        format.html { redirect_to admin_homes_path, notice: 'home was successfully created.' }
+        format.html { redirect_to admin_homes_path, notice: t("controllers.admin.homes_controller.create") }
         format.json { render :show, status: :created, location: @admin_room }
       else
         format.html { render :new }

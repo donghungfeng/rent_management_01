@@ -18,13 +18,13 @@
   <div class="wrapper" id="admin">
     <%= render "layouts/header_admin"%>
     <nav class=" sidenav" role="navigation" >
-      <a href="/home" ><i class="fa fa-desktop "></i> Trang chủ <span class="badge"></span></a>
+      <a href="/home" ><i class="fa fa-desktop "></i><%= t(".ad_home") %><span class="badge"></span></a>
       <% if current_user.role == "admin"%>
-      <a href="/admin/users" ><i class="fa fa-desktop "></i> Quản lý tài khoản <span class="badge"></span></a>
-      <a href="/admin/orders/admin_order" ><i class="fa fa-desktop "></i> Quản lý đơn đặt phòng <span class="badge"></span></a>
+      <a href="/admin/users" ><i class="fa fa-desktop "></i><%= t(".ad_a") %><span class="badge"></span></a>
+      <a href="/admin/orders/admin_order" ><i class="fa fa-desktop "></i><%= t(".ad_c") %><span class="badge"></span></a>
       <% else %>
-      <a href="/admin/homes" ><i class="fa fa-desktop "></i> Quản lý phòng trọ <span class="badge"></span></a>
-      <a href="/admin/orders/owner_order" ><i class="fa fa-desktop "></i> Quản lý đơn đặt phòng <span class="badge"></span></a>
+      <a href="/admin/homes" ><i class="fa fa-desktop "></i><%= t(".ad_b") %><span class="badge"></span></a>
+      <a href="/admin/orders/owner_order" ><i class="fa fa-desktop "></i><%= t(".ad_c") %><span class="badge"></span></a>
       <% end %>
 
     </nav>

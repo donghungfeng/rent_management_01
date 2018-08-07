@@ -1,7 +1,7 @@
 <%= form_for(admin_home, local:true) do |form| %>
   <% if admin_home.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(admin_home.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
+      <h2><%= pluralize(admin_home.errors.count, t(".f_error")) %><%= t(".f_f") %></h2>
 
       <ul>
       <% admin_home.errors.full_messages.each do |message| %>
@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label t(".f_a") %>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
-    <%= form.label :room_number %>
+    <%= form.label t(".f_b") %>
     <%= form.number_field :room_number %>
   </div>
 
   <div class="field">
-    <%= form.label :room_empty %>
+    <%= form.label t(".f_c") %>
     <%= form.number_field :room_empty %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label t(".f_d") %>
     <%= form.text_area :description %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t(".f_e") %>
   </div>
 <% end %>

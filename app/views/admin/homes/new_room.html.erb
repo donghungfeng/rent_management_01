@@ -16,53 +16,45 @@
             </ul>
           </div>
         <% end %>
-
-       <div class="field">
-          <%= form.label :name %>
-          <%= form.text_field :name, class: "form-control"%>
-        </div>
-
-        <div class="field">
-          <%= form.label :area %>
-          <%= form.number_field :area, class: "form-control" %>
-        </div>
-
-        <div class="field">
-          <%= form.label :number_room %>
-          <%= form.number_field :number_room, class: "form-control" %>
-        </div>
-
-        <%= @home.id%>
         <%= form.hidden_field :home_id, :value => @home.id%>
-
         <div class="field">
-          <%= form.label :state %>
-          <%= form.text_field :state, class: "form-control" %>
-        </div>
-
-        <div class="field">
-          <%= form.label :price %>
-          <%= form.number_field :price, class: "form-control" %>
-        </div>
-        <div class="field">
-          <%= form.label :description %>
-          <%= form.text_area :description, class: "form-control" %>
+          <%= form.label t(".nr_a") %>
+          <%= form.text_field :name,  class: 'form-control' %>
         </div>
 
         <div class="field">
-          <%= form.label :image %>
-          <%= form.file_field :image, class: "form-control" %>
+          <%= form.label t(".nr_b") %>
+          <%= form.number_field :area,  class: 'form-control' %>
         </div>
 
-
-        <div class="actions">
-          <%= form.submit %>
+        <div class="field">
+          <%= form.label t(".nr_c") %>
+          <%= form.number_field :number_room,  class: 'form-control' %>
         </div>
-      <% end %>
 
+        <div class="field">
+          <%= form.label t(".nr_d") %>
+          <%= form.text_field :state,  class: 'form-control' %>
+        </div>
 
+        <div class="field">
+          <%= form.label t(".nr_e") %>
+          <%= form.number_field :price,  class: 'form-control' %>
+        </div>
+        <div class="field">
+          <%= form.label t(".nr_f") %>
+          <%= form.text_area :description,  class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= form.label t(".nr_g") %>
+          <%= form.file_field :image,  class: 'form-control' %>
+        </div>
+      </div>
+      <div class="actions">
+      <%= form.submit t(".nr_h"), class: 'btn btn-info' %>
     </div>
   </div>
-</div>
+  <%end %>
 
 

@@ -2,17 +2,17 @@
   <div class="row">
     <div class="col-lg-12">
     <div class="panel panel-primary">
-      <div class="panel-heading"><i class="fa fa-list"></i> DANH SÁCH TÀI KHOẢN</div>
+      <div class="panel-heading"><i class="fa fa-list"></i><%= t(".r_title") %></div>
       <div class="panel-body">
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Area</th>
-              <th>Number of rooms</th>
-              <th>Image</th>
-              <th>State</th>
-              <th>Tác vụ</th>
+              <th><%= t(".r_a") %></th>
+              <th><%= t(".r_b") %></th>
+              <th><%= t(".r_c") %></th>
+              <th><%= t(".r_d") %></th>
+              <th><%= t(".r_e") %></th>
+              <th><%= t(".r_f") %></th>
             </tr>
           </thead>
           <tbody>
@@ -24,7 +24,7 @@
         </table>
       </div>
     </div>
-    <button class="btn btn-success"><i class="fa fa-plus"><%= link_to "THÊM PHÒNG", controller: "homes", action: "new_room", id: @home.id %></i></button>
+    <button class="btn btn-success"><i class="fa fa-plus"><%= link_to t(".r_g") , controller: "homes", action: "new_room", id: @home.id %></i></button>
     </div>
   </div>
   <hr />

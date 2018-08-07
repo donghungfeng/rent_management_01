@@ -34,6 +34,90 @@ en:
       foot_switchboard: "Switchboard: 1900 9999"
       foot_address: "Address: 334 Nguyen Trai, Thanh Xuan, Ha Noi"
       foot_license: "Business license No. 26072018 issued by the Department of Planning and Investment of Hanoi on 26 July 2018."
+    admin:
+      ad_home: "Home"
+      ad_a: "Account manager"
+      ad_b: "Room manager"
+      ad_c: "Order manager"
+  admin:
+    homes:
+      home:
+        h_a: "Room detail"
+        h_b: "Delete"
+        h_c: "Are you sure?"
+      edit:
+        e_a: "Show"
+        e_b: "Back"
+      form:
+        f_a: "Address"
+        f_b: "Room number"
+        f_c: "Room empty"
+        f_d: "Description"
+        f_e: "Submit"
+        f_error: "error"
+        f_f: "prohibited this admin_home from being saved"
+      new_room:
+        nr_a: "Name"
+        nr_b: "Area"
+        nr_c: "Numberroom"
+        nr_d: "State"
+        nr_e: "Price"
+        nr_f: "Description"
+        nr_g: "Image"
+        nr_h: "Submit"
+        nr_erroe: "error"
+        nr_i: "prohibited this admin_home from being saved"
+      new:
+        n_title: "New Homee"
+        n_a: "Address"
+        n_b: "Room number"
+        n_c: "Room empty"
+        n_d: "Description"
+        n_e: "Create home"
+        n_error: "error"
+        n_f: "prohibited this admin_home from being saved"
+      index:
+        in_title: "ROOM LISTS"
+        in_a: "Address"
+        in_b: "Room number"
+        in_c: "Room empty"
+        in_d: "Description"
+        in_e: "Room detail"
+        in_f: "Action"
+        in_g: "ADD ROOM"
+      room:
+        r_title: "ACCOUNT LISTS"
+        r_a: "Name"
+        r_b: "Area"
+        r_c: "Number of rooms"
+        r_d: "Image"
+        r_e: "State"
+        r_f: "Action"
+        r_g: "BOOK ROOM"
+    orders:
+      admin_order:
+        ad_title: "LIST ORDER"
+        ad_a: "User"
+        ad_b: "Order"
+        ad_c: "State"
+      owner_order:
+        o_title: "LIST ORDER"
+        o_a: "Customer"
+        o_b: "Room"
+        o_c: "State"
+        o_d: "Date start"
+        o_e: "Date end"
+    users:
+      index:
+        in_title: "ACCOUNT LISTS"
+        in_a: "Name"
+        in_b: "Phone"
+        in_c: "Email"
+        in_d: "Address"
+        in_e: "STK"
+        in_f: "Role"
+        in_g: "Action"
+        in_h: "ADD POSTS"
   rooms:
     room:
       room_a: "Detail"
@@ -119,6 +203,7 @@ en:
       ct_write: "Write something.."
     home:
       sharoom: "ShaRoom"
+      home_see: "See more..."
       home_board: "Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I dont."
       home_rooma: "Room"
       home_roomb: "normal"
@@ -182,6 +267,13 @@ en:
       user_a: "Owner"
       user_b: "Customer"
   controllers:
+    orders_controller:
+      success: "Success"
     users_controller:
       success: "Welcome to the ShaRoom!"
       danger: "User not found"
+    admin:
+      homes_controller:
+        create: "home was successfully created."
+        update: "home was successfully updated."
+        destroy: "home was successfully destroyed."

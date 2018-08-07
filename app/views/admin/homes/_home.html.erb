@@ -3,6 +3,6 @@
   <td><%= home.room_number %></td>
   <td><%= home.room_empty %></td>
   <td><%= home.description %></td>
-  <td><%= link_to "Chi tiết phòng", controller: "homes", action: "room", id: home.id %></td>
-  <td><%= link_to 'Delete', home, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= link_to t(".h_a") , controller: "homes", action: "room", id: home.id %></td>
+  <td><%= link_to t(".h_b") , home, method: :delete, data: { confirm: t(".h_c") } %></td>
 </tr>

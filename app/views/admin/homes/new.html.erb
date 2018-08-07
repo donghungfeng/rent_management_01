@@ -2,49 +2,42 @@
   <div class="col-sm-10 well">
     <div class="alert alert-info text-center">
       THÊM KHU TRỌ MỚI
-    </div>
-  <div class="row">
-      <%= form_for @admin_home, url: admin_homes_path do |form| %>
+    <h1><%= t(".n_title") %></h1>
+    <%= form_for @admin_home, url: admin_homes_path do |form| %>
       <% if @admin_home.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@admin_home.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
-
+          <h2><%= pluralize(@admin_home.errors.count, t(".n_error")) %> <%= t(".n_f") %></h2>
           <ul>
           <% @admin_home.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
           </ul>
         </div>
-      <% end %>
+        <%end%>
+        <div class="field">
+          <%= form.label t(".n_a") %>
+          <%= form.text_field :address,  class: 'form-control'%>
+        </div>
 
-      <div class="field">
-        <%= form.label :address %>
-        <%= form.text_field :address, class: "form-control" %>
+        <div class="field">
+          <%= form.label t(".n_b") %>
+          <%= form.number_field :room_number,  class: 'form-control' %>
+        </div>
+
+            <%= form.hidden_field :user_id, :value => current_user.id%>
+
+        <div class="field">
+          <%= form.label t(".n_c") %>
+          <%= form.number_field :room_empty,  class: 'form-control' %>
+        </div>
+
+        <div class="field">
+          <%= form.label t(".n_d") %>
+          <%= form.text_area :description,  class: 'form-control' %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit t(".n_e"), class: 'btn btn-info'%>
+        </div>
+        <%end%>
       </div>
-
-      <div class="field">
-        <%= form.label :room_number %>
-        <%= form.number_field :room_number, class: "form-control" %>
-      </div>
-
-      <%= form.hidden_field :user_id, :value => current_user.id%>
-
-      <div class="field">
-        <%= form.label :room_empty %>
-        <%= form.number_field :room_empty, class: "form-control" %>
-      </div>
-
-      <div class="field">
-        <%= form.label :description %>
-        <%= form.text_area :description, class: "form-control" %>
-      </div>
-
-      <div class="actions">
-        <%= form.submit %>
-      </div>
-    <% end %>
-    </div>
-  </div>
-</div>
-
-
