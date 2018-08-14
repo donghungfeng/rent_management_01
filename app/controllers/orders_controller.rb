@@ -17,7 +17,6 @@ class OrdersController < ApplicationController
     end
   end
   def show
-    flash[:success] = "Đặt phòng thành công"
     @order = Order.find_by id: params[:id]
   end
   private

@@ -17,7 +17,9 @@
         <% end %>
         <%= f.submit t ".login_submit" , class: "btn btn-primary" %>
         <% end %>
-        <p><%= t ".login_none" %><%= link_to t(".login_sign"), signup_path %></p>
+        <div class ="question">
+          <p><%= t ".login_none" %></p><span><%= link_to t(".login_sign"), signup_path %></span>
+        </div>
       </div>
     </div>
   </div>

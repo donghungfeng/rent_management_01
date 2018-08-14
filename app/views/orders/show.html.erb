@@ -8,7 +8,14 @@
       <div class="col-sm-8">
         <div class="well">
           <div class="labelPost">
-             
+            <%= form_for :order do |f| %>
+              <%= f.label :Date_Start %>
+              <%= f.label :Date_End %>
+              <%= f.label :State %>
+              <%= f.label :Number_Person %>
+              <%= f.label :Number_Bike %>
+              <%= f.label :Number_MotorBike %>
+            <% end %>
           </div>
           <div class="contentPost">
             <div class="list-product">

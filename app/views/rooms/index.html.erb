@@ -1,6 +1,6 @@
 <div class="content" stt="room" id="room">
   <div class="container">
-    <%= paginate @rooms, theme: "twitter-bootstrap-3" %>
     <%= render partial: "room",  collection: @rooms, as: "room" %>
+    <%= paginate @rooms, theme: "twitter-bootstrap-3" %>
   </div>
 </div>

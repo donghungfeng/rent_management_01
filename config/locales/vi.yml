@@ -277,6 +277,9 @@ vi:
               too_short: "quá ngắn"
             password_confirmation:
               confirmation: "không khớp mật khẩu đã chọn"
+        order:
+          attributes:
+            
         home:
           attributes:
             address:

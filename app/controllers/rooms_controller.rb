@@ -14,6 +14,5 @@ class RoomsController < ApplicationController
     def bookroom
       @room = Room.find_by id: params[:id]
     end
-
   end
   
