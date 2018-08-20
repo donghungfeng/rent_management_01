@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
-//= require animation 
+//= require preload
+//= require animation
+//= require slideShow 
 //= require_tree .

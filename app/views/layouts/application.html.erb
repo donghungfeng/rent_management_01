@@ -9,9 +9,30 @@
       "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application",
       "data-turbolinks-track": "reload" %>
+      <%= favicon_link_tag 'imgHouse/logo.png' %>
     <%= render "layouts/shim" %>
   </head>
-  <body>
+  <%= content_tag :body, data: { action: action_name, controller: controller_name } do %>
+    <div id="a" class="loading">
+      <div id="preload" class="preload-container text-center">
+        <div class="loades">
+          <div class="cricle cr1">
+          </div>
+          <div class="cricle cr2">
+          </div>
+          <div class="cricle cr3">
+          </div>
+        </div>
+        <div class=" logo">
+          <%= image_tag "imgHouse/logo.png" %>
+        </div>
+        <div class="font_text">
+        </div>
+        <div class="text">
+          CHIA SẺ THÔNG TIN - TÌM KIẾM PHÒNG TRỌ
+        </div>
+      </div>
+    </div>
     <div class="full_img">
       <%= render "layouts/header" %>
       <div class="containers" >
@@ -21,6 +42,6 @@
         <%= yield %>
       </div>
       <%= render "layouts/footer" %>
-      </div>
-  </body>
+    </div>
+  <% end %>
 </html>
