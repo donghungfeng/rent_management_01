@@ -1,8 +1,8 @@
-$(document).on('turbolinks:load', function() {
-    document.getElementsByClassName("form_control").addEvenListener("keydown", show_btn);
-   function show_btn() {
-        alert("ddff");
-        document.getElementById("but_create").style.display= "block";
-    }
+function myLife(){
+    document.getElementById('id01').style.display='none';
+    document.getElementById('show_btn').style.display ='none';  
+  }
+  function myFunction() {
+   document.getElementById("show_btn").style.display = "block";
+}
 
-});

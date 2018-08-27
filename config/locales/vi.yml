@@ -2,11 +2,11 @@ vi:
   datetime:
     distance_in_words:
         less_than_x_minutes:
-          one: "chưa tới một phút"
-          other: "%{count} phút"
+          one: "Vừa xong"
+          other: "gần một phút"
         x_minutes:
-          one: "chưa tới một phút"
-          other: "%{count} giây"
+          one: "1 phút"
+          other: "%{count} phút"
         about_x_hours:
           one: "1 giờ"
           other:  "%{count} giờ"
@@ -160,27 +160,31 @@ vi:
       show_a: "Tên"
       show_b: "Địa chỉ"
       show_c: "Diện tích"
-      show_d: "Sốphòng"
-      show_e: "Gía"
+      show_d: "Số phòng"
+      show_e: "Giá"
       show_set: "Đặt phòng"
+  posts:
+    post:
+      house: "Ngôi nhà"
+      public: "Mọi người"
+    show:
+      delete: "Xóa bài viết"
+      house: "Ngôi nhà"
+      public: "Mọi người"
+    index: 
+      news: "TIN TỨC"
+      newss: "TIN TỨC NỔI BẬT"
+      create_post: "Tạo bài viết"
+      history: "Lịch sử "
+      user_create_post: "Đã đăng tất cả"
+      post: "bài"
+      what: "Bạn đang nghĩ gì?..."
+      post_now: "Đăng bài"
+      login_post: "Bạn cần đăng nhập để viết bài! "
+      cancel: "Thoát"
+      continue: "Tiếp tục"
+      posted: "Bài đăng gần đây"
   static_pages:
-    news:
-      new_title: "TIN TỨC"
-      new_new: "TIN TỨC NỔI BẬT"
-      new_post: "BÀI VIẾT GẦN ĐÂY"
-      new_a: "Tôi yêu ngôi nhà của chúng tôi"
-      new_b: "Đăng bởi My Nguyen, 27/9/2017."
-      new_c: "Nhà"
-      new_d: "Trước khi mua nhà ở đây, vợ chồng đã đi dò nhiều nơi, nhưng không đâu bằng chỗ này-mỹ quan nhất quán, không gian thoáng đãng, cảnh quan đẹp, nhiều mảng cây xanh; nhiều tiện ích công cộng, hạ tầng giao thông đi lại tiện lợi; vệ sinh sạch sẽ, chỗ chơi rộng rãi tốt cho con nhỏ. Đặc biệt là bảo vệ, an ninh tốt. Các con tôi không biết tại sao cũng rất thích ở đây-chắc là nhiều trò chơi, công viên rộng"
-      new_e: "Ngôi nhà cũ"
-      new_f: "Đăng bởi Nam Đang, 24/6/2018."
-      new_g: "Ngôi nhà đầu tiên mà che chở, chờ đợi tôi khi tôi đặt chân từ một nơi xa tít tới Sài Gòn nhỏ bé này thân thương này. Sáu bảy năm cứ ngỡ đau như ngày hôm qua, cứ như một giấc ngủ trưa của ngày chủ nhật, như thời gian ăn xong tô hủ tiếu gõ, hay ổ bánh mỳ ăn vội mỗi sáng để làm cho kịp giờ thế đó… Nó nhanh đến nỗi tôi chưa kịp nhận ra mình cũng đã già đi phần nào, ngôi nhà cũng đã cũ kĩ hơn trước kha khá."
-      new_h: "Bình luận:"
-      new_i: "Xác nhận"
-      new_j: "24/6/2018, 9:12 chiều"
-      new_k: "Lại nhớ đến ngôi nhà của mình hồi nhỏ quá."
-      new_l: "25/6/2018, 8:25 sáng"
-      new_m: "Cảm xúc thật lắng đọng."
     contact:
       ct_title: "THÔNG TIN LIÊN HỆ"
       ct_com: "CÔNG TY TNHH NHIỀU THÀNH VIÊN VINAHOUSE"
