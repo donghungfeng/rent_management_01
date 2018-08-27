@@ -54,7 +54,6 @@ en:
       foot_switchboard: "Switchboard: 1900 9999"
       foot_address: "Address: 334 Nguyen Trai, Thanh Xuan, Ha Noi"
       foot_license: "Business license No. 26072018 issued by the Department of Planning and Investment of Hanoi on 26 July 2018."
-<<<<<<< HEAD
     admin:
       ad_home: "Home"
       ad_a: "Account manager"
@@ -139,8 +138,6 @@ en:
         in_f: "Role"
         in_g: "Action"
         in_h: "ADD POSTS"
-=======
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
   rooms:
     room:
       room_a: "Detail"
@@ -187,7 +184,7 @@ en:
       continue: "Continue"
       posted: "Posts"
   static_pages:
-    
+
     contact:
       ct_title: "CONTACT INFORMATION"
       ct_com: "LIMITED PARTNERSHIP COMPANY VINAHOUSE"
