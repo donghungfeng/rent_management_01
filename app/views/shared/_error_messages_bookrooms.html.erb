@@ -1,0 +1,12 @@
+<% if Order.create.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= t ".shared_contenta" %> <%= pluralize(Order.create.errors.count, t(".shared_contentb")) %>.
+    </div>
+    <ul>
+    <% Order.create.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

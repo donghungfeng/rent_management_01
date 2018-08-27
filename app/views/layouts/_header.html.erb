@@ -5,7 +5,7 @@
         <nav>
           <ul class="nav navbar-nav navbar-left">
             <li><span class="glyphicon glyphicon-envelope"></span></li>
-            <li><a href="#">taitran@gmail.com</a></li>
+            <li><a href="#">Admin@sharoom.com</a></li>
             <li><span class="glyphicon glyphicon-earphone"></span></li>
             <li><a href="#">123456789</a></li>
           </ul>
@@ -32,7 +32,7 @@
                   </li>
                 </ul>
               </li>
-              <li><span class="glyphicon glyphicon-globe"></span></li>
+              <li><span class="glyphicon glyphicon-globe"></span><div class="noty">1</div></li>
             <% else %>
               <li><span class="glyphicon glyphicon-user"></span></li>
               <li><%= link_to t(".sign_up") , signup_path %></li>
@@ -64,14 +64,14 @@
             <% if logged_in? %>
             <li><%= link_to t(".head_home"), root_path %></li>
             <li><%= link_to t(".head_rent"), room_path %></li>
-            <li><%= link_to t(".head_news"), news_path %></li>
+            <li><%= link_to t(".head_news"), posts_path %></li>
             <li><%= link_to t(".head_contact"), contact_path %></li>
             <li><%= link_to t(".head_help"), help_path %></li>
             <li><%= link_to "Lịch sử đặt phòng", order_path %></a></li>
             <% else %>
               <li><%= link_to t(".head_home"), root_path %></li>
-              <li><%= link_to t(".head_rent"), room_path %></li>
-              <li><%= link_to t(".head_news"), news_path %></li>
+              <li><%= link_to t(".head_rent"), room_path, class: "abc", data: {turbolinks: false} %></li>
+              <li><%= link_to t(".head_news"), posts_path %></li>
               <li><%= link_to t(".head_contact"), contact_path %></li>
               <li><%= link_to t(".head_help"), help_path %></a></li>
             <% end %>

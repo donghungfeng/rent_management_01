@@ -1,17 +1,17 @@
 class OrdersController < ApplicationController
+
   def index
     @orders = Order.where(customer_id: current_user.id ).page(params[:page]).per 3
   end
 
   def new
-    @order = order.new
+    @order = Order.new
   end
 
   def create
     @order = Order.new order_params
     if @order.save
-      flash[:success] = "Đặt phòng thành công"
-      redirect_to @order
+      render :show
     else
       render :new
     end
@@ -26,5 +26,5 @@ class OrdersController < ApplicationController
       :state, :number_bike, :number_motobike, :description
   end
 
-  end
+end
 

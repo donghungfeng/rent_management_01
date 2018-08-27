@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
   layout "admin"
   def index
-    @admin_users = User.all.page(params[:page]).per Settings.per_page
+    @admin_users = User.all.page(params[:page]).per 2
   end
 
   def destroy

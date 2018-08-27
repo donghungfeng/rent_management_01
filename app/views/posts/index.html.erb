@@ -1,0 +1,107 @@
+<div class="content" stt="news" id="news">
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <div class="well">
+          <h4> <%= t ".news" %></h4>
+        </div>
+        <div class="well">
+          <h4> <%= t ".newss" %></h4>
+        </div>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Post..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+      </div>
+    </div>
+    <div class="col-sm-8 well">
+      <div class="create_post">
+        <div class="col-sm-8">
+          <div class="head_post">
+            <span class="glyphicon glyphicon-pencil"></span>
+            <%= t ".create_post"%>
+          </div>
+          <% if logged_in? %>
+            <% @user = User.find_by id: current_user %>
+            <div class="user_post">
+              <%= @user.name %> 
+            </div>
+            <button class="btn danger" onclick="document.getElementById('id02').style.display='block'"><%= t ".history" %></button>
+            <div id="id02" class="modal1">
+              <%= form_for Post.new, :html => {:class => "modal-content animate", :action => "/action_page.php" } do |f| %>
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id02').style.display='none'" class="close">&times;</span>
+                </div>
+                <div class="container">
+                  <div class="user_post">
+                    <%= @user.name %>
+                  </div>
+                  <% if @user.posts.any? %>
+                    <span class="glyphicon glyphicon-globe"></span><h5><%= t ".user_create_post"%> <%= @user.posts.count %>  <%= t ".post"%></h5>
+                  <% end %>
+                  <div class="list_posts_user">
+                    <%= render partial: "show",  collection: @posts, as: "post" %>
+                  </div>
+                </div> 
+              <% end %>
+            </div>
+            <form role="form" class="user_content">
+              <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder = "<%= t '.what' %>"
+                  onclick="document.getElementById('id01').style.display='block'"
+                  ></textarea>
+              </div>
+            </form>
+            <div id="id01" class="modal">
+              <%= form_for Post.new, :html => {:class => "modal-content animate", :action => "/action_page.php" } do |f| %>
+                <%= render 'shared/error_messages_form', object: f.object %>
+                <div class="imgcontainer">
+                  <span onclick="myLife()" class="close">&times;</span>
+                </div>
+                <div class="container">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                  <%= f.label t(".create_post") %>
+                  <div class="user_post">
+                    <%= @user.name %>
+                  </div>
+                  <%= f.text_field :content, class: "form-control never",placeholder: t('.what'), :required => true, onkeypress: "myFunction()"%>
+                </div>
+                <%= f.submit t(".post_now") , class: "btn btn-primary", id: "show_btn", style: "display: none"%>
+              <% end %>
+            </div>
+          <% else %>
+            <form role="form" class="user_content">
+              <div class="form-group">
+                <textarea class="form-control" rows="3" placeholder= "<%= t '.what' %>"
+                onclick="document.getElementById('mes_login').style.display='block'"
+                ></textarea>
+              </div>
+              <div id="mes_login">
+                <p><%= t ".login_post" %></p>
+                <button class="btn success1"  onclick="document.getElementById('mes_login').style.display='none'"><%= t ".cancel"%></button>
+                <button class="btn success2"  onclick="document.getElementById('mes_login').style.display='none'"><%= link_to t(".continue"), controller: "sessions", action: "create"%></button>
+              </div>
+            </form>
+          <% end %>
+        </div>
+      </div>
+      <div class="hrs"></div>
+        <div class="posted">
+          <div class="row">
+            <h3 style="margin-left: 10px;"><small> <%= t ".posted"%> </small></h3>
+            <%= render partial: "post",  collection: @posts, as: "post" %>
+            <%= paginate @posts, theme: "twitter-bootstrap-3" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

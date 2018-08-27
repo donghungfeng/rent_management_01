@@ -1,4 +1,24 @@
 en:
+  datetime:
+    distance_in_words:
+        less_than_x_minutes:
+          one: "Just now"
+          other: "Just now"
+        x_minutes:
+          one: "1 min"
+          other: "%{count} mins"
+        about_x_hours:
+          one: "1 hours"
+          other:  "%{count} hrs"
+        x_days:
+          one: "1 day"
+          other: "%{count} days"
+        x_mounths:
+          one: "1 month"
+          other: "%{count} months"
+        x_years:
+          one: "1 year"
+          other: "%{count} yeaars"
   layouts:
     application:
       app_title: "Sharing information - Searching for rent house"
@@ -34,6 +54,7 @@ en:
       foot_switchboard: "Switchboard: 1900 9999"
       foot_address: "Address: 334 Nguyen Trai, Thanh Xuan, Ha Noi"
       foot_license: "Business license No. 26072018 issued by the Department of Planning and Investment of Hanoi on 26 July 2018."
+<<<<<<< HEAD
     admin:
       ad_home: "Home"
       ad_a: "Account manager"
@@ -118,6 +139,8 @@ en:
         in_f: "Role"
         in_g: "Action"
         in_h: "ADD POSTS"
+=======
+>>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
   rooms:
     room:
       room_a: "Detail"
@@ -142,24 +165,29 @@ en:
       show_d: "Numberroom"
       show_e: "Price"
       show_set: "Book room"
+  posts:
+    post:
+      house: "House"
+      public: "Public"
+    show:
+      delete: "Delete"
+      house: "House"
+      public: "Public"
+    index:
+      news: "NEWS"
+      newss: "FEATURED NEWS"
+      create_post: "Make Post"
+      history: "History"
+      user_create_post: "Posted"
+      post: ""
+      what: "What on your mind?..."
+      post_now: "Post"
+      login_post: "You need login for post! "
+      cancel: "Cancel"
+      continue: "Continue"
+      posted: "Posts"
   static_pages:
-    news:
-      new_title: "NEWS"
-      new_new: "HOT NEWS"
-      new_post: "RECENT POSTS"
-      new_a: "I love our house"
-      new_b: "Post by My Nguyen, Sep 27, 2017."
-      new_c: "House"
-      new_d: "Before buying a house here, the couple went to many places, but no where with this place-a consistent aesthetics, airy space, beautiful scenery, many pieces of trees; many public conveniences, convenient transportation infrastructure; clean, good play area for small children. Especially protection, good security. My kids do not know why they like it here - there must be a lot of games and parks"
-      new_e: "Old house"
-      new_f: "Post by Nam Dang, Jun 24, 2018."
-      new_g: "The first house that sheltered, waiting for me when I set foot from a place far to this tiny little Saigon. Seventy-seven years have been as painful as yesterday, just like a Sunday nap, like the time you eat a knob or a napkin every morning to make it so fast ... It's fast I did not even realize I was getting old, and the house was getting old."
-      new_h: "Comment:"
-      new_i: "Submit"
-      new_j: "Jun 24, 2018, 9:12 PM"
-      new_k: "Remember to my child-house again."
-      new_l: "Jun 25, 2018, 8:25 AM"
-      new_m: "Emotion is deposited."
+    
     contact:
       ct_title: "CONTACT INFORMATION"
       ct_com: "LIMITED PARTNERSHIP COMPANY VINAHOUSE"
@@ -246,7 +274,10 @@ en:
       home_y: "Phu Xuyen District"
       home_z: "Me Linh District"
   shared:
-    error_messages:
+    error_messages_users:
+      shared_contenta: "The form contains"
+      shared_contentb: "error"
+    error_messages_bookrooms:
       shared_contenta: "The form contains"
       shared_contentb: "error"
   sessions:

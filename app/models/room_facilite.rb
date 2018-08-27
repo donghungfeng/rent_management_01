@@ -1,4 +1,4 @@
-class RoomFacilite < Application
+class RoomFacilite < ApplicationRecord
   belongs_to :facility
   belongs_to :room
 

@@ -17,7 +17,7 @@
             </tr>
           </thead>
           <tbody>
-            <% if(@admin_users.nil?) %>
+            <% if(!@admin_users.nil?) %>
               <%= paginate @admin_users, theme: "twitter-bootstrap-3" %>
               <%= render partial: "admin_user",  collection: @admin_users, as: "admin_user" %>
             <% end %>

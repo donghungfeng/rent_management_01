@@ -5,7 +5,7 @@
     </div>
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for Order.create, url: newbook_path do |f| %>
+      <%= form_for(Order.new, url: newbook_path) do |f| %>
 
         <%= f.label t(".br_a") %>
         <%= f.date_field :date_start, class: "form-control" %>
@@ -17,15 +17,21 @@
         <%= f.number_field :number_person, class: "form-control" %>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
         <%= f.hidden_field :customer_id, :value => current_user.id %>
         <%= f.hidden_field :room_id, :value => @room.id %>
         <% state = "Chờ xác thực"%>
         <%= f.hidden_field :state, :value => state %>
+<<<<<<< HEAD
 =======
         <%= f.hidden_field :custom_id, value: current_user.id %>
         <%= f.hidden_field :room_id, value: @room.id %>
         <%= f.hidden_field :state, value: "Chờ xác thực"%>
 >>>>>>> ba3f0004ccb9a137b7b5e496f73126c78c9225fc
+=======
+>>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
 
         <%= f.label t(".br_d") %>
         <%= f.number_field :number_bike, class: "form-control" %>
