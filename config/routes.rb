@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get  "/room", to: "rooms#index"
   get  "/room/:id", to: "rooms#show"
   get "/bookroom/:id", to: "rooms#bookroom"
-  get  "/news", to: "static_pages#news"
   get  "/contact", to: "static_pages#contact"
   get  "/help", to: "static_pages#help"
   get  "/signup",  to: "users#new"
@@ -18,7 +17,10 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :users
   resources :orders
+  resources :posts
   get 'orders/show/:id', to: "orders#show"
+  get '/news', to: "posts#index"
+  post '/posts/:id', to: "posts#destroy"
   namespace :admin do
     get 'orders/admin_order'
     get 'orders/owner_order'

@@ -741,21 +741,356 @@ body{
   margin-top: 80px;
 }
 
-#news .col-sm-3 .well{
+#news .sidenav .well{
   height: 70px;
 }
-#news .col-sm-3 h4{
+#news .sidenav h4{
   margin: 0;
   text-align: center;
   height: 30px;
   border-bottom: 1px solid $color_scoll_select_text;
 }
 #news .col-sm-8 h4{
-  margin: 0;
+  margin: 0 auto;
   color: $color_black;
 }
 #news .col-sm-8 hr{
-  color: $color_scoll_select_text;
+  color: black;
+}
+#news .create_post{
+  display:block;
+  width: 830px;
+  height: 300px;
+} 
+#news .user_post{
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 6px 5px;
+  width: 250px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #2196F3;
+  color: dodgerblue;
+  display: inline;
+  margin-right: 5px;
+}
+
+#news .user_post:hover {
+    background: #2196F3;
+    color: white;
+}
+#news .posted .row{
+  width:750px;
+}
+#news .posts{
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+#news .posts h3{
+  padding-top: 20px;
+  margin-left: 10px;
+ 
+}
+#news .posts span{
+  margin-left: 10px;
+}
+
+#news .posts .glyphicon-time{
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+#news .posts .content{
+  margin-left: 20px;
+  height: 100px;
+}
+#news .user_content{
+  margin-top: 20px;
+}
+#news .user_content .form-control{
+  height: 150px;
+}
+#news .head_post{
+  padding: 3px ;
+  width: 100px;
+  height: 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bbb;
+}
+#news .head_post:hover{
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+#news .col-sm-8 span{
+  margin-bottom: 20px;
+}
+#news .hrs{
+  width: 90%;
+  margin-left: 45px;
+  background-color: #bbb;
+  height: 1px;
+  margin-bottom: 50px;
+}
+
+#id01 input[type=text] {
+  margin-left: 2%;
+  width: 50%;
+  height: 150px;
+  padding-left: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+#id01 label{
+  border-bottom: 1px solid #bbb;
+}
+#id01 .btn-primary{
+ margin-left: 45%;
+ margin-bottom: 30px;
+}
+
+#id01 .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+#id01 .container {
+  padding: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 20; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6); 
+  padding-top: 60px;
+}
+#id01 .user_post{
+  display: block;
+  margin-right: 0;
+  margin-left: 20px;
+}
+#id01 .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 50%; 
+}
+
+#id01 .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#id01 .close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+#id01 .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  #id01 span.psw {
+     display: block;
+     float: none;
+  }
+  #id01 .cancelbtn {
+     width: 100%;
+  }
+}
+.modal1 {
+  display: none;
+  position: fixed; 
+  z-index: 20; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6); 
+  padding-top: 60px;
+}
+#id02 .animate{
+  width: 60%;
+  margin-left: 20%;
+}
+#id02 .modal-content {
+  background-color: #f5f5f5;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 50%; 
+}
+#id02 .imgcontainer {
+  text-align: center;
+  margin: 14px 0 12px 0;
+  position: relative;
+}
+#id02 .container {
+  padding: 30px;
+  margin-top: 10%;
+}
+#id02 .container span{
+  margin-left: 5%;
+  margin-top: 1%;
+}
+#id02 .container h5{
+  width: 250px;
+  margin-left: 5px;
+  margin-top: 1%;
+  display:inline;
+}
+#id02 .close {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#id02 .close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+#id02 .user_post{
+  display: block;
+  margin-left: 20%;
+  margin-left: 20px;
+}
+/* Add Zoom Animation */
+#id02 .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  #id02 span.psw {
+     display: block;
+     float: none;
+  }
+  #id02 .cancelbtn {
+     width: 100%;
+  }
+}
+#id02 .list_posts_user{
+  width: 50%;
+
+}
+#id02 .list_posts_user span{
+  margin-left: 3%;
+  margin-top: 0;
+}
+#id02 .list_posts_user h5{
+  display: block;
+  margin-top: 0;
+  margin-left: 3%;
+}
+#id02 .list_posts_user .content{
+  padding-left: 30px;
+}
+#id02 .box_post{
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+}
+.create_post .btn.danger{
+  height: 20px;
+  color: white;
+  padding-top: 0.5px; 
+  background-color: #f44336;
+}
+.x span.glyphicon-option-horizontal{
+  margin-left: 50%;
+  margin-bottom: 0px;
+}
+.x{
+  position: absolute;
+  display: inline;
+  width:40px;
+  margin-left: 230px;
+}
+ .option{
+  width: 115px;
+  height: 40px;
+  padding: 12px 10px;
+  display: none;
+  text-decoration: none;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.x:hover .option{
+  display: block;
+}
+
+#mes_login{
+  position: absolute;
+  display: none;
+  top: 5%;
+  left: 30%;
+  width: 500px;
+  height: 150px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#mes_login p{
+  margin: 40px 30%;
+}
+#mes_login button{
+  color: white;
+  background-color: #4CAF50;
+}
+#mes_login .success1{
+  float:left;
+  margin-left: 40px;
+}
+#mes_login .success2{
+  float: right;
+  margin-right: 40px;
+}
+
+#mes_login .success2 a{
+  color: white;
+  text-decoration: none;
 }
 //Tạo page contact
 #contat .col-sm-6 ul{
@@ -1220,3 +1555,8 @@ margin-top: 100px;
 #one{
   height: 500px;
 }
+
+
+
+
+

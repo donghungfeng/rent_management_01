@@ -18,4 +18,7 @@
 //= require preload
 //= require animation
 //= require slideShow 
+//= require create_post
+//= require show_btn
+//= require history_posts
 //= require_tree .

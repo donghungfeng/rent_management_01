@@ -1,0 +1,11 @@
+<div class="posts">
+  <div class="list-post">
+    <% @user = User.find_by id: post.user_id %>
+    <h3><%= @user.name %></h3>
+    <span class="glyphicon glyphicon-time"></span> Bài đăng <%= time_ago_in_words(post.created_at) %> trước
+    <h5><span class="label label-danger">House</span> <span class="label label-primary">Public</span></h5>
+    <div class="content">
+      <h3><%= post.content%></h3>
+    </div>
+  </div>
+</div>

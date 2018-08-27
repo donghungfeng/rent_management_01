@@ -26,3 +26,6 @@ user = User.create(name: "quang", phone: 125789345, email: "n123@gmail.com", add
 user.save
 user = User.create(name: "tiep", phone: 12345445, email: "g123@gmail.com", address: "sahjd", stk: "123454556", account: "j54safgj", password: "123456", password_confirmation: "123456", role: "admin")
 user.save
+post = Post.create(user_id: 1, content: "mot hai ba bon nam sau")
+post.save
+

@@ -1,0 +1,20 @@
+<% if  post.user_id == current_user.id %>
+  <div class="box_post">
+    <% @user = User.find_by id: current_user %>
+    <h3><%= @user.name %></h3> 
+    <span class="glyphicon glyphicon-time"></span> Bài đăng <%= time_ago_in_words(post.created_at) %> trước 
+    <div class="x">
+      <span  class="glyphicon glyphicon-option-horizontal"></span>
+      <% if @user.posts.count > 0 %>
+      <%= link_to "Xóa bài viết", post, method: :destroy,
+                                   data: { confirm: "You sure?" }, class: "option" %>
+    <% end %>
+    </div>
+
+    <h5><span class="label label-danger">House</span> <span class="label label-primary">Public</span></h5>
+    <div class="content">
+      <h3><%= post.content%></h3>
+    </div>
+  </div>
+<% end %>
+
