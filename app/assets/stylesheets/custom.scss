@@ -810,6 +810,11 @@ body{
   margin-left: 20px;
   word-break: keep-all;
 }
+#news .posts .content h3{
+  width: 475px;
+  height: 150px;
+  word-break: keep-all;
+}
 #news .user_content{
   margin-top: 20px;
 }
@@ -1099,7 +1104,9 @@ body{
   color: white;
   text-decoration: none;
 }
-
+.comment{
+  height: 200px;
+}
 
 //Tạo page contact
 #contat .col-sm-6 ul{

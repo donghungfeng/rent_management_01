@@ -43,7 +43,7 @@
                     <span class="glyphicon glyphicon-globe"></span><h5><%= t ".user_create_post"%> <%= @user.posts.count %>  <%= t ".post"%></h5>
                   <% end %>
                   <div class="list_posts_user">
-                    <%= render partial: "show",  collection: @posts, as: "post" %>
+                    <%= render partial: "history",  collection: @posts, as: "post" %>
                   </div>
                 </div> 
               <% end %>
