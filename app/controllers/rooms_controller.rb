@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
     def index
       @rooms = Room.all.page(params[:page]).per 7
     end
-  
+
     def show
       @room = Room.find_by id: params[:id]
     end
@@ -11,4 +11,4 @@ class RoomsController < ApplicationController
       @room = Room.find_by id: params[:id]
     end
   end
-  
+
