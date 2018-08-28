@@ -1,0 +1,33 @@
+<div class="posts" id="show_cmt">
+  <div class="col-sm-8 well">
+    <div class="list-post">
+      <% @user = User.find_by id: @post.user_id %>
+      <h3><%= @user.name %></h3>
+      <span class="glyphicon glyphicon-time"></span>  <%= time_ago_in_words(@post.created_at) %>
+      <h5><span class="label label-danger"><%= t ".house"%></span> <span class="label label-primary"><%= t ".public"%></span></h5>
+      <div class="content">
+        <h3><%= @post.content%></h3>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="list_comment">
+        <%= render @comments %>
+        <%= paginate @comments, theme: "twitter-bootstrap-3" %>
+        <% if logged_in? %>
+        <%= form_for Comment.new do |f| %>
+        <%= f.label :Comment %>
+        <%= f.text_field :content, class: "form-control",placeholder: "Write", :required => true%>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit :Comment , class: "btn btn-primary"%>
+        <% end %>
+        <% else %>
+          <%= form_for Comment.new do |f| %>
+            <%= f.label :Comment %>
+            <%= f.text_field :content, class: "form-control",placeholder: "Write", :required => true%>
+            <%= f.submit :Comment , class: "btn btn-primary"%>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

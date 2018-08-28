@@ -801,6 +801,19 @@ body{
   margin-left: 10px;
 }
 
+#news .posts .comment{
+  background-color: #4CAF50;
+  width: 120px;
+  height: 40px;
+  margin: 10px 30px;
+}
+#news .posts .comment:hover {
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+#news .posts .comment a{
+  color: white;
+  text-decoration: none;
+}
 #news .posts .glyphicon-time{
   margin-left: 10px;
   margin-bottom: 5px;
@@ -1572,7 +1585,76 @@ margin-top: 100px;
   height: 500px;
 }
 
-
-
-
+#show_cmt {
+  height: 850px;
+}
+#show_cmt .col-sm-8{
+  height: 750px;
+}
+#show_cmt .well{
+  width:750px;
+  margin: 7% 22%;
+}
+#show_cmt .list-post{
+  margin: 10px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+#show_cmt .list-post h3{
+  width: 475px;
+  padding-top: 20px;
+  margin-left: 20px;
+  word-break: keep-all;
+}
+#show_cmt .list-post span{
+  margin-left: 25px;
+}
+#show_cmt .list-post .glyphicon-time{
+  margin-left: 25px;
+  margin-bottom: 5px;
+}
+#show_cmt .list-post .content{
+  width: 475px;
+  margin-left: 20px;
+  word-break: keep-all;
+}
+#show_cmt .list-post .content h3{
+  width: 475px;
+  height: 150px;
+  word-break: keep-all;
+}
+#show_cmt  .list_comment{
+  width: 690px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+#show_cmt .list_comment label{
+  margin-left: 15px;
+}
+#show_cmt .list_comment input.form-control{
+  width:85%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+#show_cmt .list_comment input.btn-primary{
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+#cmt{
+  height: 50px;
+}
+#cmt .user_cmt{
+  color: #668cff;
+  padding-top: 10px; 
+  margin: 0px 20px;
+  margin-top: 20px;
+}
+#cmt .content_cmt{
+  margin-left: 50px;
+  height: 50px;
+  width: 400px;
+  word-break: keep-all;
+}
 

@@ -12,8 +12,7 @@ class CommentsController < ApplicationController
     def create
       @comment = current_user.comments.build(comment_params)
       if @comment.save
-        flash[:success] = "Bạn comment win"
-        redirect_to news_url
+        redirect_to posts_url
       else
         render 'static_pages/news'
       end

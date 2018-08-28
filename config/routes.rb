@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'orders/show/:id', to: "orders#show"
   get '/news', to: "posts#index"
   get '/news', to: "comments#comment"
+  get '/posts/:id', to: "posts#show"
   post '/posts/:id', to: "posts#destroy"
   namespace :admin do
     get 'orders/admin_order'
