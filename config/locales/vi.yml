@@ -167,7 +167,7 @@ vi:
     post:
       house: "Ngôi nhà"
       public: "Mọi người"
-    show:
+    history:
       delete: "Xóa bài viết"
       house: "Ngôi nhà"
       public: "Mọi người"
@@ -184,6 +184,14 @@ vi:
       cancel: "Thoát"
       continue: "Tiếp tục"
       posted: "Bài đăng gần đây"
+    show:
+      house: "Ngôi nhà"
+      public: "Mọi người"
+      cmt: "Bình luận"
+      write: "Viết bình luận"
+      cancel: "Thoát"
+      continue: "Tiếp tục"
+      login_post: "Bạn cần đăng nhập để viết bài! "
   static_pages:
     contact:
       ct_title: "THÔNG TIN LIÊN HỆ"

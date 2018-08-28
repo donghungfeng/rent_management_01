@@ -57,7 +57,6 @@
             </form>
             <div id="id01" class="modal">
               <%= form_for Post.new, :html => {:class => "modal-content animate", :action => "/action_page.php" } do |f| %>
-                <%= render 'shared/error_messages_form', object: f.object %>
                 <div class="imgcontainer">
                   <span onclick="myLife()" class="close">&times;</span>
                 </div>

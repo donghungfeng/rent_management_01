@@ -1087,7 +1087,7 @@ body{
   display: block;
 }
 
-#mes_login{
+#mes_login, #mes_login1{
   position: absolute;
   display: none;
   top: 5%;
@@ -1097,23 +1097,37 @@ body{
   background-color: #f2f2f2;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-#mes_login p{
+#mes_login1{
+  top:45%;
+  left: 15%;
+}
+#show_cmt textarea.form-control{
+  height: 35px;
+  width: 80%;
+  margin-left: 20px;
+}
+
+#show_cmt .btn-primary{
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+#mes_login p, #mes_login1 p{
   margin: 40px 30%;
 }
-#mes_login button{
+#mes_login button, #mes_login1 button{
   color: white;
   background-color: #4CAF50;
 }
-#mes_login .success1{
+#mes_login .success1, #mes_login1 .success1{
   float:left;
   margin-left: 40px;
 }
-#mes_login .success2{
+#mes_login .success2, #mes_login1 .success2{
   float: right;
   margin-right: 40px;
 }
 
-#mes_login .success2 a{
+#mes_login .success2 a, #mes_login1 .success2 a{
   color: white;
   text-decoration: none;
 }
@@ -1641,6 +1655,9 @@ margin-top: 100px;
 #show_cmt .list_comment input.btn-primary{
   margin-left: 15px;
   margin-bottom: 10px;
+}
+#show_cmt .user_content h5{
+  margin-left: 15px;
 }
 #cmt{
   height: 50px;

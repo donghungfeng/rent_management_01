@@ -82,7 +82,7 @@ en:
     post:
       house: "House"
       public: "Public"
-    show:
+    history:
       delete: "Delete"
       house: "House"
       public: "Public"
@@ -99,6 +99,14 @@ en:
       cancel: "Cancel"
       continue: "Continue"
       posted: "Posts"
+    show:
+      house: "House"
+      public: "Public"
+      cmt: "Comment"
+      write: "Write"
+      cancel: "Cancel"
+      continue: "Continue"
+      login_post: "You need login for post! "
   static_pages:
     
     contact:
