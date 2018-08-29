@@ -80,7 +80,7 @@ class Admin::HomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_home_params
-      params.require(:home).permit(:address, :room_number, :room_empty, :description, :user_id)
+      params.require(:home).permit(:district, :address, :room_number, :room_empty, :description, :user_id)
     end
 
     def admin_room_params

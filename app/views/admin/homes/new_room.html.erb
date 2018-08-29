@@ -3,108 +3,61 @@
     <div class="alert alert-info text-center">
       THÊM PHÒNG MỚI
     </div>
-  <div class="row">
+    <div class="row">
       <%= form_for @admin_room, url: admin_homes_create_room_path, html: { multipart: true } do |form| %>
-        <% if @admin_room.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@admin_room.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
+      <% if @admin_room.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin_room.errors.count, "error") %> prohibited this admin_home from being saved:</h2>
 
-            <ul>
-            <% @admin_room.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
-<<<<<<< HEAD
-        <%= form.hidden_field :home_id, :value => @home.id%>
-        <div class="field">
-          <%= form.label t(".nr_a") %>
-          <%= form.text_field :name,  class: 'form-control' %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_b") %>
-          <%= form.number_field :area,  class: 'form-control' %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_c") %>
-          <%= form.number_field :number_room,  class: 'form-control' %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_d") %>
-          <%= form.text_field :state,  class: 'form-control' %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_e") %>
-          <%= form.number_field :price,  class: 'form-control' %>
-=======
-<%= form_for @admin_room, url: admin_homes_create_room_path, html: { multipart: true } do |form| %>
-  <% if @admin_room.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_room.errors.count, t(".nr_error")) %> <%= t(".n_i") %></h2>
-
-
-        <%= @home.id%>
-        <%= form.hidden_field :home_id, :value => @home.id%>
-        <div class="field">
-          <%= form.label t(".nr_a") %>
-          <%= form.text_field :name %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_b") %>
-          <%= form.number_field :area %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_c") %>
-          <%= form.number_field :number_room %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_d") %>
-          <%= form.text_field :state %>
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
-        </div>
-
-        <div class="field">
-<<<<<<< HEAD
-          <%= form.label t(".nr_f") %>
-          <%= form.text_area :description,  class: 'form-control' %>
-=======
-          <%= form.label t(".nr_e") %>
-          <%= form.number_field :price %>
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
-        </div>
-        <div class="field">
-<<<<<<< HEAD
-          <%= form.label t(".nr_g") %>
-          <%= form.file_field :image,  class: 'form-control' %>
-        </div>
+        <ul>
+          <% @admin_room.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
-      <div class="actions">
-      <%= form.submit t(".nr_h"), class: 'btn btn-info' %>
+      <% end %>
+
+      <%= @home.id%>
+      <%= form.hidden_field :home_id, :value => @home.id%>
+      <div class="field">
+        <%= form.label t(".nr_a") %>
+        <%= form.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label t(".nr_b") %>
+        <%= form.number_field :area, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label t(".nr_c") %>
+        <%= form.number_field :number_room, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label t(".nr_d") %>
+        <%= form.text_field :state, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label t(".nr_e") %>
+        <%= form.number_field :price,  class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= form.label t(".nr_f") %>
+        <%= form.text_area :description, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label t(".nr_g") %>
+        <%= form.file_field :image, class: 'form-control' %>
+      </div>
     </div>
-  </div>
-  <%end %>
-=======
-          <%= form.label t(".nr_f") %>
-          <%= form.text_area :description %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".nr_g") %>
-          <%= form.file_field :image %>
-        </div>
-      </div>
-      <div class="actions">
+    <div class="actions">
       <%= form.submit t(".nr_h") %>
     </div>
+    <%end%>
   </div>
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
+</div>
 
 

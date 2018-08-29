@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/room_district'
   root "static_pages#home"
   get "/order", to: "orders#index"
   get  "/room/:id", to: "rooms#show"

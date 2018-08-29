@@ -94,6 +94,7 @@ en:
         n_c: "Room empty"
         n_d: "Description"
         n_e: "Create home"
+        n_g: "District"
         n_error: "error"
         n_f: "prohibited this admin_home from being saved"
       index:
@@ -161,6 +162,7 @@ en:
       show_c: "Area"
       show_d: "Numberroom"
       show_e: "Price"
+      show_f: "District"
       show_set: "Book room"
   posts:
     post:

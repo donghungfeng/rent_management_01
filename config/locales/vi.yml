@@ -97,6 +97,7 @@ vi:
         n_e: "Tạo phòng"
         n_error: "lỗi"
         n_f: "ngăn cản chủ nhà trong việc lưu lại"
+        n_g: "Quận (huyện)"
       index:
         in_title: "DANH SÁCH KHU TRO"
         in_a: "Địa chỉ"
@@ -162,6 +163,7 @@ vi:
       show_c: "Diện tích"
       show_d: "Số phòng"
       show_e: "Giá"
+      show_f: "Quận (huyện)"
       show_set: "Đặt phòng"
   posts:
     post:

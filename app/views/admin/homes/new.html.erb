@@ -1,93 +1,44 @@
-<div id="login">
+<div >
   <div class="col-sm-10 well">
     <div class="alert alert-info text-center">
       THÊM KHU TRỌ MỚI
-<<<<<<< HEAD
-    <h1><%= t(".n_title") %></h1>
-    <%= form_for @admin_home, url: admin_homes_path do |form| %>
-=======
-<h1><%= t(".n_title") %></h1>
-<%= form_for @admin_home, url: admin_homes_path do |form| %>
-  <% if @admin_home.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_home.errors.count, t(".n_error")) %> <%= t(".n_f") %></h2>
-
-      <ul>
-      <% @admin_home.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <div class="row">
+      <h1><%= t(".n_title") %></h1>
       <%= form_for @admin_home, url: admin_homes_path do |form| %>
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
       <% if @admin_home.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@admin_home.errors.count, t(".n_error")) %> <%= t(".n_f") %></h2>
-          <ul>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin_home.errors.count, t(".n_error")) %> <%= t(".n_f") %></h2>
+        <ul>
           <% @admin_home.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+          <li><%= message %></li>
           <% end %>
-          </ul>
-        </div>
-<<<<<<< HEAD
-        <%end%>
-        <div class="field">
-          <%= form.label t(".n_a") %>
-          <%= form.text_field :address,  class: 'form-control'%>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".n_b") %>
-          <%= form.number_field :room_number,  class: 'form-control' %>
-        </div>
-=======
-      <% end %>
-
-  <div class="field">
-    <%= form.label t(".n_a") %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label t(".n_b") %>
-    <%= form.number_field :room_number %>
-  </div>
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
-
-            <%= form.hidden_field :user_id, :value => current_user.id%>
-
-<<<<<<< HEAD
-        <div class="field">
-          <%= form.label t(".n_c") %>
-          <%= form.number_field :room_empty,  class: 'form-control' %>
-        </div>
-
-        <div class="field">
-          <%= form.label t(".n_d") %>
-          <%= form.text_area :description,  class: 'form-control' %>
-        </div>
-
-        <div class="actions">
-          <%= form.submit t(".n_e"), class: 'btn btn-info'%>
-        </div>
-        <%end%>
+        </ul>
       </div>
-=======
-  <div class="field">
-    <%= form.label t(".n_c") %>
-    <%= form.number_field :room_empty %>
-  </div>
-
-  <div class="field">
-    <%= form.label t(".n_d") %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit t(".n_e")%>
+      <% end %>
+      <div class="field">
+        <%= form.label t(".n_g") %>
+        <%= form.text_field :district,  class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= form.label t(".n_a") %>
+        <%= form.text_field :address,  class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= form.label t(".n_b") %>
+        <%= form.number_field :room_number,  class: 'form-control' %>
+      </div>
+      <%= form.hidden_field :user_id, :value => current_user.id%>
+      <div class="field">
+        <%= form.label t(".n_c") %>
+        <%= form.number_field :room_empty,  class: 'form-control' %>
+      </div>
+      <div class="field">
+        <%= form.label t(".n_d") %>
+        <%= form.text_area :description,  class: 'form-control' %>
+      </div>
+      <div class="actions">
+        <%= form.submit t(".n_e"), class: 'btn btn-info' %>
+      </div>
+      <%end%>
+    </div>
   </div>
 </div>
-
-
->>>>>>> 8efeb19de94e15fc538c63a8e14a777f8a402a07
