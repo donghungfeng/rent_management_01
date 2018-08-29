@@ -15,5 +15,7 @@ class RoomsController < ApplicationController
     @room = Room.find_by id: params[:id]
   end
   def room_district
+    home = Home.where(district: params[:id])
+    @rooms = Room.where(home_id: home.ids).page(params[:page]).per 7
   end
 end

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'rooms/room_district'
   root "static_pages#home"
   get "/order", to: "orders#index"
   get  "/room/:id", to: "rooms#show"
   get "/newbook", to: "orders#show"
   post "/newbook", to: "orders#create"
   get "home", to: "static_pages#home"
+  get '/room_district/:id', to: "rooms#room_district"
   get  "/room", to: "rooms#index"
   get  "/room/:id", to: "rooms#show"
   get "/bookroom/:id", to: "rooms#bookroom"
