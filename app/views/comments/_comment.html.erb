@@ -1,0 +1,9 @@
+<div class="commented" id="cmt">
+  <div class="user_cmt">
+    <% @user = User.find_by id: comment.user_id %>
+    <%= @user.name %>
+  </div>
+    <div class="content_cmt">
+      <h5><%= comment.content%></h5>
+    </div>
+</div>

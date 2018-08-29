@@ -6,8 +6,14 @@ class PostsController < ApplicationController
       @posts = Post.all.page(params[:page]).per 7
     end
 
+    def show
+      @post = Post.find(params[:id])
+      @comments = @post.comments.page(params[:page]).per 3
+    end
+
     def create
       @post = current_user.posts.build(post_params)
+      
       if @post.save
         flash[:success] = "Bạn đã đăng bài thành công!"
         redirect_to news_url

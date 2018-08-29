@@ -1,0 +1,42 @@
+<div class="posts" id="show_cmt">
+  <div class="col-sm-8 well">
+    <div class="list-post">
+      <% @user = User.find_by id: @post.user_id %>
+      <h3><%= @user.name %></h3>
+      <span class="glyphicon glyphicon-time"></span>  <%= time_ago_in_words(@post.created_at) %>
+      <h5><span class="label label-danger"><%= t ".house"%></span> <span class="label label-primary"><%= t ".public"%></span></h5>
+      <div class="content">
+        <h3><%= @post.content%></h3>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="list_comment">
+        <%= render @comments %>
+        <%= paginate @comments, theme: "twitter-bootstrap-3" %>
+        <% if logged_in? %>
+        <%= form_for Comment.new do |f| %>
+        <%= f.label t(".cmt") %>
+        <%= f.text_field :content, class: "form-control",placeholder: t(".write"), :required => true%>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.submit t(".cmt") , class: "btn btn-primary"%>
+        <% end %>
+        <% else %>
+          <form role="form" class="user_content">
+            <h5><%= t ".cmt" %></h5>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder= "<%= t '.write'%>"
+                onclick="document.getElementById('mes_login1').style.display='block'"
+                ></textarea>
+            </div>
+            <button class="btn btn-primary"><%= t ".cmt" %></button>
+            <div id="mes_login1">
+              <p><%= t ".login_post" %></p>
+              <button class="btn success1"  onclick="document.getElementById('mes_login').style.display='none'"><%= t ".cancel"%></button>
+              <button class="btn success2"  onclick="document.getElementById('mes_login').style.display='none'"><%= link_to t(".continue"), controller: "sessions", action: "create"%></button>
+            </div>
+          </form>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

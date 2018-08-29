@@ -3,7 +3,8 @@ class User < ApplicationRecord
   has_many :homes
   has_many :role_users
   has_many :posts, dependent: :destroy
-
+  has_many :comments, dependent: :destroy
+  
   before_save{self.email = email.downcase}
   validates :name,  presence: true,
     length: {maximum: Settings.name_max_length}

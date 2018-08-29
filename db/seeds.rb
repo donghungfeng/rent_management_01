@@ -28,3 +28,4 @@ user = User.create(name: "tiep", phone: 12345445, email: "g123@gmail.com", addre
 user.save
 post = Post.create(user_id: 1, content: "mot hai ba bon nam sau")
 post.save
+comment = Comment.create( content: "Ez game", user_id: 5, post_id: 22)

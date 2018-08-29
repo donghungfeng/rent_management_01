@@ -43,7 +43,7 @@
                     <span class="glyphicon glyphicon-globe"></span><h5><%= t ".user_create_post"%> <%= @user.posts.count %>  <%= t ".post"%></h5>
                   <% end %>
                   <div class="list_posts_user">
-                    <%= render partial: "show",  collection: @posts, as: "post" %>
+                    <%= render partial: "history",  collection: @posts, as: "post" %>
                   </div>
                 </div> 
               <% end %>
@@ -57,7 +57,6 @@
             </form>
             <div id="id01" class="modal">
               <%= form_for Post.new, :html => {:class => "modal-content animate", :action => "/action_page.php" } do |f| %>
-                <%= render 'shared/error_messages_form', object: f.object %>
                 <div class="imgcontainer">
                   <span onclick="myLife()" class="close">&times;</span>
                 </div>
