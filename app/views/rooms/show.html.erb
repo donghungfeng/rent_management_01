@@ -8,7 +8,11 @@
         <div class="row">
           <div class="col-sm-4" >
             <div class="imgPost">
-              <a href="#"><%= image_tag "imgHouse/post1.jpg" %></a>
+              <% if(room.image.thumb.url.nil?) %>
+              <%= image_tag "imgHouse/post1.jpg" %>
+              <% else %>
+              <%= image_tag room.image.thumb.url %>
+              <% end %>
             </div>
           </div>
           <div class="col-sm-8 ">

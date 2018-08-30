@@ -1,8 +1,28 @@
+<%
+    def options_for_district
+  [
+    ['Quận Ba Đình','1'],
+    ['Quận Hoàn Kiếm','2'],
+    ['Quận Hai Bà Trưng','3'],
+    ['Quận Đống Đa','4'],
+    ['Quận Tây Hồ','5'],
+    ['Quận Cầu Gíây','6'],
+    ['Quận Thanh Xuân','7'],
+    ['Quận Hoàng Mai','8'],
+    ['Quận Long Biên','9'],
+    ['Quận Hà Đông','10'],
+    ['Huyện Thanh Trì','11'],
+    ['Huyện Gia Lâm','12'],
+    ['Huyện Đông Anh','13'],
+    ['Huyện Sóc Sơn','14'],
+    ['Thị xã Sơn Tây','15']
+  ]
+end
+%>
 <div >
   <div class="col-sm-10 well">
     <div class="alert alert-info text-center">
       THÊM KHU TRỌ MỚI
-      <h1><%= t(".n_title") %></h1>
       <%= form_for @admin_home, url: admin_homes_path do |form| %>
       <% if @admin_home.errors.any? %>
       <div id="error_explanation">
@@ -16,7 +36,7 @@
       <% end %>
       <div class="field">
         <%= form.label t(".n_g") %>
-        <%= form.text_field :district,  class: 'form-control' %>
+        <%= form.select :district, options_for_district, {}, prompt: 'Chọn quận (huyện)' %>
       </div>
       <div class="field">
         <%= form.label t(".n_a") %>
